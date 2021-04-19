@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Labs20211-Gr04</string>
+    <string name="infoPersonal">Información Personal</string>
+    <string name="nombres">Nombres*</string>
+    <string name="apellidos">Apellidos*</string>
+    <string name="sexo">Sexo:</string>
+    <string name="hombre">Hombre</string>
+    <string name="mujer">Mujer</string>
+    <string name="fechaNacimiento">Fecha de Nacimiento*</string>
+    <string name="cambiar">Cambiar</string>
+    <string name="gradoEscolaridad">Grado de escolaridad:</string>
+    <string-array name="educacion">
+        <item>Primaria</item>
+        <item>Secundaria</item>
+        <item>Universidad</item>
+        <item>Otro</item>
+    </string-array>
+    <string name="continuar">Siguiente</string>
+    <string name="bienvenida">Iniciar registro</string>
 </resources>
