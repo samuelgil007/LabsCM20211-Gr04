@@ -17,4 +17,5 @@
     </string-array>
     <string name="continuar">Siguiente</string>
     <string name="bienvenida">Iniciar registro</string>
+    <string name="Gender_Image">Gender image</string>
 </resources>
