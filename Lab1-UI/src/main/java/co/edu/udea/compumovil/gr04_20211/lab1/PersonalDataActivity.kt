@@ -1,6 +1,7 @@
 package co.edu.udea.compumovil.gr04_20211.lab1
 
 import android.app.DatePickerDialog
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -107,7 +108,8 @@ class PersonalDataActivity : AppCompatActivity() {
                     }
                     Log.v("Resultado", " \n" + "Informacion Personal: \n" + nombresId.text.toString() + " " + apellidosId.text.toString() + "\n"+ genero +"\nNació el " + fechaId.text.toString() + "\n" + estudio+ "\n" )
                 }
-
+                val intent: Intent = Intent(this, ContactDataActivity::class.java)
+                startActivity(intent)
 
 
             }else{
