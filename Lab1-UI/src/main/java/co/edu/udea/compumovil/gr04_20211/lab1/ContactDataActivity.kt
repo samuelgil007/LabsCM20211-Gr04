@@ -1,5 +1,6 @@
 package co.edu.udea.compumovil.gr04_20211.lab1
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -51,6 +52,8 @@ class ContactDataActivity : AppCompatActivity() {
             }else{
                 Log.v("resultado", " \n" + "Información de contacto: \nTeléfono: " + textTelefono.text.toString() + "\nDirección: " + direccion.text.toString() + "\nEmail: " + correo.text.toString() + "\nPaís: " + pais.text.toString() + "\nCiudad: " + ciudad.text.toString())
             }
+            val intent: Intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }else{
             if(Locale.getDefault().displayLanguage.equals("English")){
                 Toast.makeText(
