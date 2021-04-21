@@ -17,14 +17,14 @@
         <item>Other</item>
     </string-array>
     <string name="continuar">Next</string>
-    <string name="bienvenida">Start SingUp</string>
-    <string name="Gender_Image">Imagen genero</string>
-    <string name="pais">País</string>
+    <string name="bienvenida">Start SignUp</string>
+    <string name="Gender_Image">Gender image</string>
+    <string name="pais">Country*</string>
     <string name="email">E-mail</string>
-    <string name="correo">Correo</string>
-    <string name="telefono">Teléfono</string>
-    <string name="ciudad">Ciudad</string>
-    <string name="InfoContacto">Información de Contacto</string>
-    <string name="dirreción">Dirección</string>
-    <string name="planeta">Planeta</string>
+    <string name="correo">Email*</string>
+    <string name="telefono">Phone*</string>
+    <string name="ciudad">City</string>
+    <string name="InfoContacto">Contact information</string>
+    <string name="dirreción">Address</string>
+    <string name="planeta">Planet</string>
 </resources>

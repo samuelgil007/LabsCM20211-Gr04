@@ -41,7 +41,6 @@ class ContactDataActivity : AppCompatActivity() {
     }
 
     fun siguienteClick(view: View) {
-        //Hacer el logcat que falta, imprimiendo los campos y validando los obligatorios
         if (!textTelefono.text.isEmpty() && !correo.text.isEmpty() && !pais.text.isEmpty()){
             if (direccion.text.isEmpty() && ciudad.text.isEmpty()){
                 Log.v("resultado", "\n" + "Información de contacto: \nTeléfono: " + textTelefono.text.toString() + "\nEmail: " + correo.text.toString() + "\nPaís: " + pais.text.toString())

@@ -18,10 +18,10 @@
     <string name="continuar">Siguiente</string>
     <string name="bienvenida">Iniciar registro</string>
     <string name="Gender_Image">Imagen genero</string>
-    <string name="pais">País</string>
+    <string name="pais">País*</string>
     <string name="email">E-mail</string>
-    <string name="correo">Correo</string>
-    <string name="telefono">Teléfono</string>
+    <string name="correo">Correo*</string>
+    <string name="telefono">Teléfono*</string>
     <string name="ciudad">Ciudad</string>
     <string name="InfoContacto">Información de Contacto</string>
     <string name="dirreción">Dirección</string>
