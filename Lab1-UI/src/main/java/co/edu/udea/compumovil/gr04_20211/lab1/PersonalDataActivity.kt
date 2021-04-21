@@ -90,7 +90,7 @@ class PersonalDataActivity : AppCompatActivity() {
 
                 if (radioGrupo.getCheckedRadioButtonId() == -1)
                 {
-                    Log.v("Resultado", " \n" + "Informacion Personal: \n" + nombresId.text.toString() + " " + apellidosId.text.toString() + "\nNació el " + fechaId.text.toString() + "\n" + estudio+ "\n")
+                    Log.v("Resultado", " \n" + "Información Personal: \n" + nombresId.text.toString() + " " + apellidosId.text.toString() + "\nNació el " + fechaId.text.toString() + "\n" + estudio+ "\n")
 
                 }
                 else

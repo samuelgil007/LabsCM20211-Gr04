@@ -3,8 +3,12 @@ package co.edu.udea.compumovil.gr04_20211.lab1
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
+import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_contact_data.*
+import java.util.*
 
 class ContactDataActivity : AppCompatActivity() {
     private val paisesLatinoamerica = arrayOf(
@@ -37,7 +41,31 @@ class ContactDataActivity : AppCompatActivity() {
 
     fun siguienteClick(view: View) {
         //Hacer el logcat que falta, imprimiendo los campos y validando los obligatorios
-
+        if (!textTelefono.text.isEmpty() && !correo.text.isEmpty() && !pais.text.isEmpty()){
+            if (direccion.text.isEmpty() && ciudad.text.isEmpty()){
+                Log.v("resultado", "\n" + "Información de contacto: \nTeléfono: " + textTelefono.text.toString() + "\nEmail: " + correo.text.toString() + "\nPaís: " + pais.text.toString())
+            }else if (direccion.text.isEmpty()){
+                Log.v("resultado", " \n" + "Información de contacto: \nTeléfono: " + textTelefono.text.toString() + "\nEmail: " + correo.text.toString() + "\nPaís: " + pais.text.toString() + "\nCiudad: " + ciudad.text.toString())
+            }else if (ciudad.text.isEmpty()){
+                Log.v("resultado", " \n" + "Información de contacto: \nTeléfono: " + textTelefono.text.toString() + "\nDirección: " + direccion.text.toString() + "\nEmail: " + correo.text.toString() + "\nPaís: " + pais.text.toString())
+            }else{
+                Log.v("resultado", " \n" + "Información de contacto: \nTeléfono: " + textTelefono.text.toString() + "\nDirección: " + direccion.text.toString() + "\nEmail: " + correo.text.toString() + "\nPaís: " + pais.text.toString() + "\nCiudad: " + ciudad.text.toString())
+            }
+        }else{
+            if(Locale.getDefault().displayLanguage.equals("English")){
+                Toast.makeText(
+                    this,
+                    "Error, please fill all the inputs with *",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }else{
+                Toast.makeText(
+                    this,
+                    "Error, ingrese los datos con *",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+        }
 
     }
 }
