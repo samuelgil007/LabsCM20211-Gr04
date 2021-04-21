@@ -10,6 +10,7 @@
     <string name="cambiar">Cambiar</string>
     <string name="gradoEscolaridad">Grado de escolaridad:</string>
     <string-array name="educacion">
+        <item> </item>
         <item>Primaria</item>
         <item>Secundaria</item>
         <item>Universidad</item>
