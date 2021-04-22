@@ -185,6 +185,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_marginTop="24dp"
+                android:background="#C6C6C6"
                 android:gravity="center" />
 
             <LinearLayout
