@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddSitio"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/nombreSitio"
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre de la ciudad"
+        android:layout_margin="10dp">
+    </EditText>
+
+    <EditText
+        android:id="@+id/descripcionSitio"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_margin="10dp"
+        android:hint="Descripcion"
+        android:inputType="textMultiLine"
+        android:lines="4"
+        android:maxLines="4"
+    />
+    <EditText
+        android:id="@+id/temperaturaSitio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Temperatura"
+        android:inputType="number"
+        android:layout_margin="10dp">
+    </EditText>
+    <EditText
+        android:id="@+id/ubicacionSItio"
+        android:layout_width="match_parent"
+        android:inputType="text"
+        android:layout_height="wrap_content"
+        android:hint="Ubicacion"
+        android:layout_margin="10dp">
+    </EditText>
+    <Button
+        android:id="@+id/guardarSitio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Guardar">
+    </Button>
+</LinearLayout>

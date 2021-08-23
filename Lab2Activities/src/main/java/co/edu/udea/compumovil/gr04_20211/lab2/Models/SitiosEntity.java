@@ -6,21 +6,79 @@ import androidx.room.PrimaryKey;
 @Entity(tableName = "sitios")
 public class SitiosEntity {
     @PrimaryKey(autoGenerate = true)
-    Integer id;
+    public Integer id;
 
     @ColumnInfo(name = "nombre")
-    String nombre;
+    public String nombre;
 
     @ColumnInfo(name = "imagen")
-    String imagen;
+    public String imagen;
 
     @ColumnInfo(name = "descripcion")
-    String descripcion;
+    public String descripcion;
 
     @ColumnInfo(name = "temperatura")
-    String temperatura;
+    public String temperatura;
 
     @ColumnInfo(name = "localizacion")
-    String localizacion;
+    public String localizacion;
 
+    public Integer getId() {
+        return id;
+    }
+
+    public SitiosEntity(String nombre, String imagen, String descripcion, String temperatura, String localizacion) {
+        this.nombre = nombre;
+        this.imagen = imagen;
+        this.descripcion = descripcion;
+        this.temperatura = temperatura;
+        this.localizacion = localizacion;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public String getTemperatura() {
+        return temperatura;
+    }
+
+    public void setTemperatura(String temperatura) {
+        this.temperatura = temperatura;
+    }
+
+    public String getLocalizacion() {
+        return localizacion;
+    }
+
+    public void setLocalizacion(String localizacion) {
+        this.localizacion = localizacion;
+    }
+
+    public SitiosEntity() {
+    }
 }

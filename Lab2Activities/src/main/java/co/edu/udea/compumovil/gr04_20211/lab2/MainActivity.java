@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import co.edu.udea.compumovil.gr04_20211.lab2.DB.DataBaseLab2;
+import co.edu.udea.compumovil.gr04_20211.lab2.DB.DataBaseV2;
 import co.edu.udea.compumovil.gr04_20211.lab2.Daos.UserDao;
 import co.edu.udea.compumovil.gr04_20211.lab2.Models.UserEntity;
 
@@ -36,8 +36,8 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"LLene todos los campos!", Toast.LENGTH_SHORT).show();
                 } else{
                     // se hace la peticion
-                    DataBaseLab2 dataBaseLab2 = DataBaseLab2.getDatabase(getApplicationContext());
-                    final UserDao userDao = dataBaseLab2.userDao();
+                    DataBaseV2 dataBaseV2 = DataBaseV2.getInstanceDb2(getApplicationContext());
+                    final UserDao userDao = dataBaseV2.userDao();
                     new Thread(new Runnable() {
                         @Override
                         public void run() {
