@@ -1,10 +1,10 @@
 package co.edu.udea.compumovil.gr04_20211.lab2.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -19,16 +19,12 @@ import java.util.List;
 
 import co.edu.udea.compumovil.gr04_20211.lab2.Models.SitiosEntity;
 import co.edu.udea.compumovil.gr04_20211.lab2.R;
+import co.edu.udea.compumovil.gr04_20211.lab2.DetallesActivity;
 
 public class SitioAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private List<SitiosEntity> sitios = new ArrayList<>();
     private Context ctx;
-    private OnItemClickListener mOnItemClickListener;
-
-    public void setmOnItemClickListener(final OnItemClickListener mOnItemClickListener) {
-        this.mOnItemClickListener = mOnItemClickListener;
-    }
 
     public SitioAdapter(List<SitiosEntity> sitios, Context ctx) {
         this.sitios = sitios;
@@ -39,14 +35,15 @@ public class SitioAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         public ImageView imagenSitio;
         public TextView nombre, descripcion;
         public CardView lyt_parent;
+        private final Context context;
 
         public OriginalViewHolder(View itemView) {
             super(itemView);
+            context = itemView.getContext();
             lyt_parent = itemView.findViewById(R.id.lyt_parent);
             imagenSitio = (ImageView) itemView.findViewById(R.id.imagenSitio);
             nombre = (TextView) itemView.findViewById(R.id.nombre);
             descripcion = (TextView) itemView.findViewById(R.id.descripcion);
-
         }
     }
 
@@ -74,21 +71,42 @@ public class SitioAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
                     .fitCenter()
                     .into(view.imagenSitio);
         }
+        Intent intent =  new Intent(view.context, DetallesActivity.class);
+        intent.putExtra("descripcion", sitiosEntity.descripcion);
+        intent.putExtra("localizacion", sitiosEntity.localizacion);
+        intent.putExtra("nombre", sitiosEntity.nombre);
+        intent.putExtra("temperatura", sitiosEntity.temperatura);
+        view.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                view.context.startActivity(intent);
+            }
+        });
+        view.imagenSitio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                view.context.startActivity(intent);
+            }
+        });
         view.lyt_parent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(mOnItemClickListener!=null){
-                    mOnItemClickListener.onItemClick(v,sitios.get(position),position);
-                }
+                view.context.startActivity(intent);
+            }
+        });
+        view.nombre.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                view.context.startActivity(intent);
+            }
+        });
+        view.descripcion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                view.context.startActivity(intent);
             }
         });
     }
-
-    public interface OnItemClickListener{
-        void onItemClick(View view, SitiosEntity sitiosEntity, int pos);
-    }
-
-
 
     @Override
     public int getItemCount() {

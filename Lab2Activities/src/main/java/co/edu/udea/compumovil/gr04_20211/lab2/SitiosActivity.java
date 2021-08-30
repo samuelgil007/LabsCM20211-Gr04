@@ -100,4 +100,7 @@ public class SitiosActivity extends AppCompatActivity {
     }
 
 
+    public void visualizarDetalle(View view) {
+        System.out.println(listaSitio.get(1));
+    }
 }
