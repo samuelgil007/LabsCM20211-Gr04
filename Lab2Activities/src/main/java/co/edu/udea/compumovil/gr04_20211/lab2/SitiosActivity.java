@@ -109,16 +109,6 @@ public class SitiosActivity extends AppCompatActivity {
         recyclerView.setAdapter(sitioAdapter);
     }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.config){
-            startActivity(new Intent(SitiosActivity.this, configuracionActivity.class));
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
     public void visualizarDetalle(View view) {
         System.out.println(listaSitio.get(1));
     }
