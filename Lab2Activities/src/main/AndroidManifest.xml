@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Labs20211Gr04">
-        <activity android:name=".DetallesActivity"></activity>
+        <activity android:name=".configuracionActivity"></activity>
+        <activity android:name=".DetallesActivity" />
         <activity android:name=".detallesActivty" />
         <activity android:name=".AgregarSitioActivity" />
         <activity android:name=".AddSitio" />

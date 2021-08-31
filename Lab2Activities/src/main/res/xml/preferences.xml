@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="Configuraciones">
+        <CheckBoxPreference
+            android:title="Notificaciones"
+            android:summary="Para autorizar notificaciones"
+            android:key="notification_check"
+            />
+        <CheckBoxPreference
+            android:title="Notificación con sonido"
+            android:summary="Activar sonido para notificaciones"
+            android:key="sonido_check"
+            />
+    </PreferenceCategory>
+    <PreferenceCategory>
+        <Preference
+            android:key="cerrar_sesion"
+            android:title="Cerrar sesión"
+            />
+    </PreferenceCategory>
+</PreferenceScreen>

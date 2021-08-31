@@ -1,5 +1,6 @@
 package co.edu.udea.compumovil.gr04_20211.lab2;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
@@ -9,8 +10,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,7 +25,7 @@ import co.edu.udea.compumovil.gr04_20211.lab2.Models.SitiosEntity;
 import co.edu.udea.compumovil.gr04_20211.lab2.adapter.SitioAdapter;
 
 public class SitiosActivity extends AppCompatActivity {
-
+    ImageView conf;
     TextView tName;
     Button addSitio;
     RecyclerView recyclerView;
@@ -42,11 +45,18 @@ public class SitiosActivity extends AppCompatActivity {
     List<SitiosEntity> listaSitio = new ArrayList<>();
     private void bind_views(){
         addSitio = findViewById(R.id.crearSitio);
+        conf = findViewById(R.id.config);
         recyclerView = findViewById(R.id.recyclerView);
         addSitio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(SitiosActivity.this, AgregarSitioActivity.class ).putExtra("username", getIntent().getStringExtra("username")));
+            }
+        });
+        conf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(SitiosActivity.this, configuracionActivity.class));
             }
         });
 
@@ -99,6 +109,15 @@ public class SitiosActivity extends AppCompatActivity {
         recyclerView.setAdapter(sitioAdapter);
     }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.config){
+            startActivity(new Intent(SitiosActivity.this, configuracionActivity.class));
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     public void visualizarDetalle(View view) {
         System.out.println(listaSitio.get(1));
